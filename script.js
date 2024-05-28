@@ -1,8 +1,17 @@
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    navbar.style.backgroundColor = '#555'; /* Change background color when scrolled */
-  } else {
-    navbar.style.backgroundColor = '#333'; /* Revert back to initial background color */
-  }
-});
+Let sections= document.querySelectorAll('section');
+Let navLinks = document.querySelectorAll('header nav a');
+window.onscroll=()=>{
+    sections.forEach(sec=>{
+        Let top=window.scrollY;
+        Let offset=sec.offsetTop;
+        Let height=sec.offsetHeight;
+        Let id=sec.getAttribute('id');
+        if(top>=offset && top <offset+height){
+            navLinks.forEach(links=>{
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*='+id+']').classList.add('active');
+            });
+        };
+    });
+
+};
