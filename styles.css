@@ -1,49 +1,68 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppin',sans-serif;
+}
+header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 120px;
+     background: #11141a;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+nav a {
+ font-size: 18px;
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500;
+ margin-left: 35px;
+ transition: .3s;
+}
+nav a:hover,
+nav a.active{
+    color: #0ef;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f242d;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+}
+section:nth-child(1) {
+    background: #183770; /* Dark background color for the first section */
 }
 
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333; /* Initial background color */
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+section:nth-child(2) {
+    background: #b81b77; /* Light green background color for the second section */
 }
 
-.logo {
-  color: #fff;
-  font-size: 20px;
+section:nth-child(3) {
+    background: #630a9e; /* Orange background color for the third section */
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+section:nth-child(4) {
+    background: #1b926c; /* Blue background color for the fourth section */
 }
 
-ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-ul li a:hover {
-  color: #ffcc00; /* Hover color */
-}
-
-.content {
-  padding-top: 60px; /* Adjust according to navbar height */
-  height: 1500px; /* Just for demonstration */
+section:nth-child(5) {
+    background: #e718a5; /* Yellow background color for the fifth section */
 }
